@@ -1,9 +1,13 @@
 import React from "react"
 
-export const Home = () => {
+interface Props {
+    title: string;
+}
+
+export const Home = (props: Props) => {
     return (
         <div>
-            Hello World
+            { props.title }
         </div>
     )
 }
