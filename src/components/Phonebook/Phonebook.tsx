@@ -95,20 +95,20 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         display: 'flex',
         flexDirection: 'column',
     },
-    appBar: {
-       transition: theme.transitions.create(['margin', 'width'], {
-         easing: theme.transitions.easing.sharp,
-         duration: theme.transitions.duration.leavingScreen,
-    }),
-    },
-    appBarShift: {
-       width: `calc(100% - ${drawerWidth}px)`,
-       marginLeft: drawerWidth,
-       transition: theme.transitions.create(['margin', 'width'], {
-         easing: theme.transitions.easing.easeOut,
-         duration: theme.transitions.duration.enteringScreen,
-    }),
-    },
+    //appBar: {
+    //   transition: theme.transitions.create(['margin', 'width'], {
+    //     easing: theme.transitions.easing.sharp,
+    //     duration: theme.transitions.duration.leavingScreen,
+    //}),
+    //},
+    //appBarShift: {
+    //   width: `calc(100% - ${drawerWidth}px)`,
+    //   marginLeft: drawerWidth,
+    //  transition: theme.transitions.create(['margin', 'width'], {
+    //     easing: theme.transitions.easing.easeOut,
+    //     duration: theme.transitions.duration.enteringScreen,
+    //}),
+    //},
     menuButton: {
       marginRight: theme.spacing(2),
     },
@@ -116,36 +116,36 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       display: 'none',
     },
     drawer: {
-      width: drawerWidth,
-      flexShrink: 0,
+        width: drawerWidth,
+        flexShrink: 0,
     },
-    drawerPaper: {
-       width: drawerWidth,
-    },
-    drawerHeader: {
-       display: 'flex',
-       alignItems: 'center',
-       padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-       ...theme.mixins.toolbar,
-       justifyContent: 'flex-end',
-    },
-    content: {
-       flexGrow: 1,
-       padding: theme.spacing(3),
-       transition: theme.transitions.create('margin', {
-         easing: theme.transitions.easing.sharp,
-         duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
-    },
-     contentShift: {
-       transition: theme.transitions.create('margin', {
-         easing: theme.transitions.easing.easeOut,
-         duration: theme.transitions.duration.enteringScreen,
-       }),
-       marginLeft: 0,
-    },
+    // drawerPaper: {
+    //     width: drawerWidth,
+    // },
+    // drawerHeader: {
+    //    display: 'flex',
+    //    alignItems: 'center',
+    //    padding: theme.spacing(0, 1),
+    // // necessary for content to be below app bar
+    //    ...theme.mixins.toolbar,
+    //    justifyContent: 'flex-end',
+    // },
+    // content: {
+    //    flexGrow: 1,
+    //    padding: theme.spacing(3),
+    //    transition: theme.transitions.create('margin', {
+    //      easing: theme.transitions.easing.sharp,
+    //      duration: theme.transitions.duration.leavingScreen,
+    // }),
+    // marginLeft: -drawerWidth,
+    // },
+    //  contentShift: {
+    //    transition: theme.transitions.create('margin', {
+    //      easing: theme.transitions.easing.easeOut,
+    //      duration: theme.transitions.duration.enteringScreen,
+    //    }),
+    //    marginLeft: 0,
+    // },
     toolbar:{
       display: 'flex',
       backgroundColor: '#003155',
@@ -263,7 +263,7 @@ export const Phonebook = withRouter(( props:PhonebookProps ) => {
             </MUIDrawer>
             <main className={`${clsx(classes.content, {[classes.contentShift]: open,})} ${classes.leftMargin}`}>
                 <div className={classes.drawerHeader} />
-                    {/* <DataTable /> */} {/* Keep this commented out for now */}
+                    <DataTable /> 
             </main>
         </div>
     )
