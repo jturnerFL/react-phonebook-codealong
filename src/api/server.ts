@@ -2,7 +2,7 @@ let token = '74aaaa8b98a6a483abbac3643f40a87e1979771ae68f2f25';
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`https://my-phonebook-ct-main.herokuapp.com/api/contacts`,{
+        const response = await fetch(`https://myphonebookcodealong.herokuapp.com/`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const server_calls = {
     },
 
     create: async(data: any = {}) => {
-        const response = await fetch(`https://my-phonebook-ct-main.herokuapp.com/api/contacts`,{
+        const response = await fetch(`https://myphonebookcodealong.herokuapp.com/`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const server_calls = {
 	},
 
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`https://my-phonebook-ct-main.herokuapp.com/api/contacts/${id}`, {
+        const response = await fetch(`https://myphonebookcodealong.herokuapp.com/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const server_calls = {
     },
 
     delete: async(id:string) => {
-        const response = await fetch(`https://my-phonebook-ct-main.herokuapp.com/api/contacts/${id}`,{
+        const response = await fetch(`https://myphonebookcodealong.herokuapp.com/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
