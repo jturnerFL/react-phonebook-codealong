@@ -1,22 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { FirebaseAppProvider, AuthCheck } from 'reactfire';
-import { Home, About, Contact, Phonebook } from './components'
+import { Home, About, Contact, Phonebook, Signin } from './components'
 import './style.css';
+import { FirebaseAppProvider, AuthCheck } from 'reactfire';
+import { firebaseConfig } from './firebaseConfig';
 import { Provider } from 'react-redux';
-import { store } from './redux/store'
+import { store } from './redux/store';
 
-const myTitle = "Jim's Phonebook"
+let myTitle = "Jim's Phonebook"
 
-ReactDOM.render(
+<ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}> 
+  <Provider store={store}> 
     <Router>
       <Switch>
 
         <Route exact path="/">
-          <Home title={myTitle}/>
+          <Home title={myTitle} />
         </Route>
         <Route path='/phonebook'>
           <Phonebook></Phonebook>
@@ -27,9 +28,9 @@ ReactDOM.render(
         <Route path='/about'>
           <About></About>
         </Route>
-        {/*<Route path='/signin'>
+        <Route path='/signin'>
           <Signin></Signin>
-          </Route>*/}
+          </Route>
 
       </Switch>
     </Router>

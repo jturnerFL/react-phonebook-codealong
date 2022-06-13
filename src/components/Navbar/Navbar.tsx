@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import Digits from '../../assets/images/digitloop.png';
+import Digits from '../../assets/images/Full Armor Icon S.jpg';
 import { mergeClasses } from '@material-ui/styles';
 
 
@@ -70,7 +70,7 @@ export const Navbar = () => {
 
     return (
         <div className={`${classes.row} ${classes.navbar} ${classes.width100} ${classes.alignCenter} ${classes.p5} ${classes.spaceBetween} `}>
-            <div className={`${classes.navlogo} `}>
+            <div className={`${classes.navLogo} `}>
                 <Link to='/' className={`${classes.logo} ${classes.p5} `}/>
             </div>
             <div className={`${classes.width60} ${classes.alignCenter} `}>

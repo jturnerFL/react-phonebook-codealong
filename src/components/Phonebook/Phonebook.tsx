@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { useGetData } from '../../custom-hooks';
 import  { Link } from 'react-router-dom';
 import { Paper } from '@material-ui/core';
-import { Drawer as MUIDrawer,
+import { Drawer as MUIDrawer,    
     ListItem,
     List,
     ListItemIcon,
@@ -38,7 +38,7 @@ interface PhonebookProps{
     match: RouteComponentProps["match"];
 }
 
-const drawerWiidth = 240;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     main: {
