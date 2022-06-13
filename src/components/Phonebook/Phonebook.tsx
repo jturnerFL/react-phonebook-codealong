@@ -28,7 +28,7 @@ import { Drawer as MUIDrawer,
     import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
     import ChevronRightIcon from '@material-ui/icons/ChevronRight';
     import clsx from 'clsx';
-    import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
+    import { RouteComponentProps, withRouter, Switch, Route } from "react-router-dom";
     import { DataTable } from '../../components/DataTable';
     import { ContactForm } from '../ContactForm';
 
@@ -263,8 +263,8 @@ export const Phonebook = withRouter(( props:PhonebookProps ) => {
             </MUIDrawer>
             <main className={`${clsx(classes.content, {[classes.contentShift]: open,})} ${classes.leftMargin}`}>
                 <div className={classes.drawerHeader} />
-                    <DataTable /> 
+                    <DataTable />
             </main>
         </div>
     )
-});
+});   
